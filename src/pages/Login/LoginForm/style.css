@@ -1,0 +1,125 @@
+div {
+  display: block;
+}
+.bg {
+  background: linear-gradient(to right, #f8f8f8, #f8f8f8, #f8f8f8);
+  background-size: cover;
+}
+.login {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  overflow: hidden;
+  width: 350px;
+  min-height: 310px;
+  background: #fff;
+  text-align: center;
+}
+#login {
+  width: 350px;
+  margin-bottom: 20px;
+}
+.login-tabs {
+  background-color: #fff;
+}
+.login-content {
+  padding-top: 2px;
+  width: 300px;
+  margin: 0 auto;
+  font: 400 12px arial;
+  font-family: PingFang SC, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial,
+    Microsoft YaHei;
+  color: #666;
+}
+#login-error {
+  border: 1px solid #ff934c;
+  background: #fefcee;
+  margin-bottom: 16px;
+  font-size: 14px;
+  padding: 5px 8px;
+  overflow: hidden;
+  display: none;
+}
+.icon-warning {
+  color: #ff934c;
+  float: left;
+}
+.login-error-msg {
+  font-size: 12px;
+  padding-left: 20px;
+  text-align: left;
+}
+.fm-field {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.fm-label-icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 1px;
+  bottom: 1px;
+  background-color: #ccc;
+  font-size: 24px;
+}
+.fm-text {
+  border: 1px solid #ccc;
+  height: 42px;
+  outline: none;
+  font-size: 14px;
+  padding: 0;
+  padding-left: 50px;
+  width: 85%;
+  border-color: #e7e7e7;
+}
+.fm-text:focus,
+.fm-text:hover {
+  border-color: #ff1268;
+}
+.fm-btn {
+  width: 102%;
+  border: 1px solid #ff9000;
+  border-radius: 3px;
+  font-size: 20px;
+  height: 42px;
+  line-height: 42px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #ff1268;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff4aae),
+    to(#ff1268)
+  );
+  background-image: linear-gradient(90deg, #ff4aae, #ff1268);
+  border-color: #ff1268;
+}
+.login-blocks {
+  margin: 8px 0;
+  text-align: right;
+  zoom: 1;
+}
+
+.login-blocks a {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #08c;
+  text-decoration: none;
+  margin-top: 20px;
+}
