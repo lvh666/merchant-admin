@@ -151,7 +151,7 @@ export default function IndexPage() {
                     src={item.pic || ''}
                   />
                 }
-                title={<a href="https://ant.design">{item.shop}</a>}
+                title={<a>{item.shop}</a>}
                 description={item.address}
               />
               <div style={{ color: statusColor[item.isReview] }}>

@@ -92,7 +92,7 @@ const BasicLayout = (props) => {
           >
             评论管理
           </Menu.Item>
-          <Menu.Item
+          {/* <Menu.Item
             key="3"
             onClick={() => {
               handleJump('/product');
@@ -100,7 +100,7 @@ const BasicLayout = (props) => {
             icon={<RestOutlined />}
           >
             商品管理
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
       </Sider>
       <Layout className="site-layout">
