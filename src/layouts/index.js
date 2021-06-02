@@ -3,6 +3,8 @@ import { Layout, Menu, message } from 'antd';
 import {
   UserOutlined,
   RestOutlined,
+  MoneyCollectOutlined,
+  AccountBookOutlined,
   LogoutOutlined,
   MessageOutlined,
   MenuUnfoldOutlined,
@@ -72,9 +74,9 @@ const BasicLayout = (props) => {
           <GitlabOutlined />
           {!collapsed && '商家审核系统'}
         </div>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={[pathname]}>
           <Menu.Item
-            key="1"
+            key="/"
             onClick={() => {
               handleJump('/');
             }}
@@ -84,13 +86,31 @@ const BasicLayout = (props) => {
             餐馆审核
           </Menu.Item>
           <Menu.Item
-            key="2"
+            key="/comment"
             onClick={() => {
               handleJump('/comment');
             }}
             icon={<MessageOutlined />}
           >
             评论管理
+          </Menu.Item>
+          <Menu.Item
+            key="/withdraw"
+            onClick={() => {
+              handleJump('/withdraw');
+            }}
+            icon={<MoneyCollectOutlined />}
+          >
+            提现审核
+          </Menu.Item>
+          <Menu.Item
+            key="/refund"
+            onClick={() => {
+              handleJump('/refund');
+            }}
+            icon={<AccountBookOutlined />}
+          >
+            退款审核
           </Menu.Item>
           {/* <Menu.Item
             key="3"

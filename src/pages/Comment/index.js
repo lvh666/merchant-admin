@@ -4,10 +4,6 @@ import { Table, message, Avatar, Card, Radio } from 'antd';
 
 export default function IndexPage() {
   const [comments, setComments] = useState([]);
-  const [pagination, setPagination] = useState({
-    current: 1,
-    pageSize: 10,
-  });
 
   const columns = [
     {
@@ -73,18 +69,13 @@ export default function IndexPage() {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
       data: {
-        curPage: pagination.current - 1,
-        pageNum: pagination.pageSize,
+        curPage: 0,
+        pageNum: 100,
       },
     })
       .then((res) => res.data)
       .then((res) => {
         setComments(() => res.data.comments);
-        setPagination(() => ({
-          current: pagination.current + 1,
-          pageSize: pagination.pageSize,
-          total: res.data.total,
-        }));
       })
       .catch((err) => {
         message.error('获取评论列表失败，请刷新重试');
@@ -93,7 +84,13 @@ export default function IndexPage() {
 
   return (
     <div>
-      <Table columns={columns} dataSource={comments} pagination={pagination} />
+      <Table
+        columns={columns}
+        dataSource={comments}
+        pagination={{
+          pageSize: 8,
+        }}
+      />
     </div>
   );
 }
